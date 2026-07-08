@@ -1,0 +1,87 @@
+.tst {
+  background: var(--surface-900);
+  border-top: 1px solid var(--border-subtle);
+  padding-block: 100px;
+}
+
+.tst-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: 22px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.tst-card__glow {
+  position: absolute;
+  top: -141px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 760px;
+  max-width: 120%;
+  height: 460px;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(76, 125, 255, 0.16), transparent 66%);
+}
+
+.tst-card__mark {
+  position: relative;
+  color: var(--blue-500);
+}
+
+.tst-card__quote {
+  position: relative;
+  max-width: 860px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2.6vw, 27px);
+  line-height: 1.42;
+  letter-spacing: -0.005em;
+  color: var(--white);
+}
+
+.tst-card__author {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tst-card__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-strong);
+}
+
+.tst-card__author > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.tst-card__name {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.tst-card__role {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .tst-card {
+    padding: 40px 24px;
+  }
+}
