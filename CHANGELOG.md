@@ -20,6 +20,7 @@
 - Made the content card full viewport height (100vh), keeping its width (max-width 640px) unchanged; content is vertically centered inside the tall card.
 - Reverted the 100vh card height and made the content card a full circle instead (`border-radius: 50%`, equal width/height sized via `min(640px, 82vmin)`), content centered inside.
 - Switched `.coming-soon` from flex to CSS grid `place-items: center` (more reliable single-item centering) and added a `100dvh` fallback alongside `100vh` for correct centering on mobile browsers where the address bar affects viewport height.
+- Updated the animated background gradient to use the exact brand colors `#0D3B66`, `#1E5FAE`, `#2FB344` (was using a non-brand blue accent `#4c7dff`).
 
 ## [1.0.0] - initial
 

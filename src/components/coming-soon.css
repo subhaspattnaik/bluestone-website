@@ -9,7 +9,7 @@
   padding: 6vh 20px;
   color: #14161c;
   overflow: hidden;
-  background: linear-gradient(120deg, #0D3B66, #4c7dff, #2FB344, #0D3B66);
+  background: linear-gradient(120deg, #0D3B66, #1E5FAE, #2FB344, #0D3B66);
   background-size: 300% 300%;
   animation: gradientFlow 8s ease infinite;
 }
