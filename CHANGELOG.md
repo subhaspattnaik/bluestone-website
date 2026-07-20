@@ -19,6 +19,7 @@
 - Re-added a frosted card (`rgba(255,255,255,0.65)` + `blur(24px)` + drop shadow, rounded corners) around the logo/title/tagline/message on top of the full-screen glass layer, for extra contrast so the text reads clearly against the moving gradient.
 - Made the content card full viewport height (100vh), keeping its width (max-width 640px) unchanged; content is vertically centered inside the tall card.
 - Reverted the 100vh card height and made the content card a full circle instead (`border-radius: 50%`, equal width/height sized via `min(640px, 82vmin)`), content centered inside.
+- Switched `.coming-soon` from flex to CSS grid `place-items: center` (more reliable single-item centering) and added a `100dvh` fallback alongside `100vh` for correct centering on mobile browsers where the address bar affects viewport height.
 
 ## [1.0.0] - initial
 
