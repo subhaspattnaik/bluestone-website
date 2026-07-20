@@ -22,7 +22,7 @@
   font-size: clamp(2rem, 6vw, 3.25rem);
   margin: 0 0 12px;
   letter-spacing: -0.01em;
-  color: #14161c;
+  color: #0D3B66;
 }
 
 .coming-soon__eyebrow {
@@ -31,7 +31,7 @@
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #2f6fed;
+  color: #2FB344;
   margin: 0 0 32px;
 }
 
