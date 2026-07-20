@@ -7,81 +7,21 @@
   align-items: center;
   justify-content: center;
   padding: 6vh 20px;
-  background: #ffffff;
   color: #14161c;
   overflow: hidden;
+  background: linear-gradient(120deg, #0D3B66, #4c7dff, #2FB344, #0D3B66);
+  background-size: 300% 300%;
+  animation: gradientFlow 8s ease infinite;
 }
 
-.coming-soon__bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.coming-soon__orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(110px);
-  will-change: transform;
-}
-
-.coming-soon__orb--navy {
-  top: -18%;
-  left: -12%;
-  width: 60vw;
-  height: 60vw;
-  max-width: 700px;
-  max-height: 700px;
-  background: #0D3B66;
-  opacity: 0.3;
-  animation: orbDriftA 7s ease-in-out infinite;
-}
-
-.coming-soon__orb--green {
-  bottom: -18%;
-  right: -12%;
-  width: 55vw;
-  height: 55vw;
-  max-width: 640px;
-  max-height: 640px;
-  background: #2FB344;
-  opacity: 0.22;
-  animation: orbDriftB 8s ease-in-out infinite;
-}
-
-.coming-soon__orb--blue {
-  top: 28%;
-  left: 52%;
-  width: 50vw;
-  height: 50vw;
-  max-width: 600px;
-  max-height: 600px;
-  background: #4c7dff;
-  opacity: 0.24;
-  animation: orbDriftC 6s ease-in-out infinite;
-}
-
-@keyframes orbDriftA {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(9vw, 7vh) scale(1.12); }
-  66% { transform: translate(-5vw, 11vh) scale(0.94); }
-}
-
-@keyframes orbDriftB {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-11vw, -8vh) scale(1.1); }
-  66% { transform: translate(6vw, -5vh) scale(0.95); }
-}
-
-@keyframes orbDriftC {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-13vw, 10vh) scale(1.15); }
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .coming-soon__orb {
+  .coming-soon {
     animation: none;
   }
 }
@@ -95,6 +35,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: clamp(32px, 6vw, 56px) clamp(24px, 5vw, 48px);
+  box-shadow: 0 24px 60px rgba(13, 59, 102, 0.28);
 }
 
 .coming-soon__logo {
