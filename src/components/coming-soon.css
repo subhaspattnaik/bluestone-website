@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6vh 20px;
+  padding: 0 20px;
   color: #14161c;
   overflow: hidden;
   background: linear-gradient(120deg, #0D3B66, #4c7dff, #2FB344, #0D3B66);
@@ -41,10 +41,14 @@
   z-index: 2;
   width: 100%;
   max-width: 640px;
+  height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow-y: auto;
   padding: clamp(32px, 6vw, 56px) clamp(24px, 5vw, 48px);
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(24px);
