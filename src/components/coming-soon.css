@@ -11,7 +11,7 @@
 }
 
 .coming-soon__logo {
-  width: 120px;
+  width: clamp(160px, 24vw, 260px);
   height: auto;
   margin-bottom: 24px;
 }
