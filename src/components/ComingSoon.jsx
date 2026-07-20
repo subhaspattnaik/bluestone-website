@@ -1,4 +1,4 @@
-import logomark from '../assets/logomark.svg'
+import logomark from '../assets/logomark.png'
 
 export default function ComingSoon() {
   return (

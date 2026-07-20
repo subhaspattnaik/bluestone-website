@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Replaced the live site with a "Coming Soon" placeholder page (`src/components/ComingSoon.jsx`), pending relaunch. Full marketing site is preserved on the `full-site-backup` branch and in `develop`; `App.jsx` and `index.html` were swapped to render only the placeholder.
+- Updated the Coming Soon page to a white/light theme and swapped in the new logo (`src/assets/logomark.png`), replacing the dark theme and previous SVG logomark.
 
 ## [1.0.0] - initial
 

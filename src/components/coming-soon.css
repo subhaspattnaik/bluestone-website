@@ -6,13 +6,13 @@
   justify-content: center;
   text-align: center;
   padding: 24px;
-  background: radial-gradient(circle at 50% 20%, #1c1f28 0%, #08090c 70%);
-  color: #f5f6f8;
+  background: #ffffff;
+  color: #14161c;
 }
 
 .coming-soon__logo {
-  width: 64px;
-  height: 64px;
+  width: 120px;
+  height: auto;
   margin-bottom: 24px;
 }
 
@@ -22,6 +22,7 @@
   font-size: clamp(2rem, 6vw, 3.25rem);
   margin: 0 0 12px;
   letter-spacing: -0.01em;
+  color: #14161c;
 }
 
 .coming-soon__eyebrow {
@@ -30,7 +31,7 @@
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #7aa0ff;
+  color: #2f6fed;
   margin: 0 0 32px;
 }
 
@@ -38,6 +39,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: #b9bdc9;
+  color: #5a5f6d;
   margin: 0;
 }
