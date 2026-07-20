@@ -36,7 +36,7 @@
   max-height: 700px;
   background: #0D3B66;
   opacity: 0.3;
-  animation: orbDriftA 24s ease-in-out infinite;
+  animation: orbDriftA 7s ease-in-out infinite;
 }
 
 .coming-soon__orb--green {
@@ -48,7 +48,7 @@
   max-height: 640px;
   background: #2FB344;
   opacity: 0.22;
-  animation: orbDriftB 28s ease-in-out infinite;
+  animation: orbDriftB 8s ease-in-out infinite;
 }
 
 .coming-soon__orb--blue {
@@ -60,7 +60,7 @@
   max-height: 600px;
   background: #4c7dff;
   opacity: 0.24;
-  animation: orbDriftC 20s ease-in-out infinite;
+  animation: orbDriftC 6s ease-in-out infinite;
 }
 
 @keyframes orbDriftA {

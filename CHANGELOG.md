@@ -13,6 +13,7 @@
 - Changed the blob motion from bouncing back-and-forth on a fixed axis to wandering: each blob now animates to a freshly randomized position/scale every cycle (self-relaunching via `onComplete`), so movement reads as random-direction drift instead of a repeating back-and-forth.
 - Reworked the background into 10 bubble-like blobs of varying size/color/opacity that continuously rise from the bottom to above the top with a gentle horizontal drift, then loop back to the bottom at a new random spot — reading as floating bubbles instead of wandering blobs.
 - Replaced the bubble effect (read as unprofessional) with a slow-drifting, heavily blurred multi-color gradient wash: three large brand-colored orbs (navy/green/blue) that drift and scale via pure CSS `@keyframes`, blending into each other for a shifting-gradient look. Dropped the `animejs` dependency since the background no longer needs JS-driven animation.
+- Sped up the gradient orb drift (24-28s cycles → 6-8s) per feedback that the motion was too slow to notice.
 
 ## [1.0.0] - initial
 
