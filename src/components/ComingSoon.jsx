@@ -3,6 +3,7 @@ import logomark from '../assets/logomark.png'
 export default function ComingSoon() {
   return (
     <div className="coming-soon">
+      <div className="coming-soon__glass" aria-hidden="true" />
       <div className="coming-soon__content">
         <img src={logomark} alt="Blue Stone" className="coming-soon__logo" />
         <h1 className="coming-soon__title">BLUESTONE</h1>
