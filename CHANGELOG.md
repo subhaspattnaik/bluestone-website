@@ -16,6 +16,7 @@
 - Sped up the gradient orb drift (24-28s cycles → 6-8s) per feedback that the motion was too slow to notice.
 - Replaced the corner-orb gradient with a full-screen animated brand gradient (navy → blue → green, `background-size: 300% 300%` panning via `@keyframes`, 8s loop) so color covers the entire viewport instead of just the edges. Content now sits in a frosted white card (`rgba(255,255,255,0.9)` + `backdrop-filter: blur`) for legibility over the moving color.
 - Split the frosted-glass card into its own full-screen layer (`.coming-soon__glass`, `rgba(255,255,255,0.55)` + `blur(80px)`) sitting between the animated gradient and the text content, instead of a small card — the whole page now reads as glass over a moving gradient, with the text sitting directly on top.
+- Re-added a frosted card (`rgba(255,255,255,0.65)` + `blur(24px)` + drop shadow, rounded corners) around the logo/title/tagline/message on top of the full-screen glass layer, for extra contrast so the text reads clearly against the moving gradient.
 
 ## [1.0.0] - initial
 
