@@ -20,12 +20,70 @@
   pointer-events: none;
 }
 
-.coming-soon__blob {
+.coming-soon__orb {
   position: absolute;
-  bottom: -15%;
   border-radius: 50%;
-  filter: blur(36px);
+  filter: blur(110px);
   will-change: transform;
+}
+
+.coming-soon__orb--navy {
+  top: -18%;
+  left: -12%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: #0D3B66;
+  opacity: 0.3;
+  animation: orbDriftA 24s ease-in-out infinite;
+}
+
+.coming-soon__orb--green {
+  bottom: -18%;
+  right: -12%;
+  width: 55vw;
+  height: 55vw;
+  max-width: 640px;
+  max-height: 640px;
+  background: #2FB344;
+  opacity: 0.22;
+  animation: orbDriftB 28s ease-in-out infinite;
+}
+
+.coming-soon__orb--blue {
+  top: 28%;
+  left: 52%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: #4c7dff;
+  opacity: 0.24;
+  animation: orbDriftC 20s ease-in-out infinite;
+}
+
+@keyframes orbDriftA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(9vw, 7vh) scale(1.12); }
+  66% { transform: translate(-5vw, 11vh) scale(0.94); }
+}
+
+@keyframes orbDriftB {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-11vw, -8vh) scale(1.1); }
+  66% { transform: translate(6vw, -5vh) scale(0.95); }
+}
+
+@keyframes orbDriftC {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-13vw, 10vh) scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coming-soon__orb {
+    animation: none;
+  }
 }
 
 .coming-soon__content {
