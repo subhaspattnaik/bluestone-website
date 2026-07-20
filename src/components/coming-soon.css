@@ -1,44 +1,54 @@
 .coming-soon {
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 24px;
+  padding: 6vh 20px;
   background: #ffffff;
   color: #14161c;
 }
 
+.coming-soon__content {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .coming-soon__logo {
-  width: clamp(160px, 24vw, 260px);
+  width: clamp(96px, 26vw, 240px);
   height: auto;
-  margin-bottom: 24px;
+  margin: 0 0 clamp(16px, 4vw, 24px);
 }
 
 .coming-soon__title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-size: clamp(1.75rem, 9vw, 3.25rem);
   margin: 0 0 12px;
   letter-spacing: -0.01em;
   color: #0D3B66;
+  word-break: break-word;
 }
 
 .coming-soon__eyebrow {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: clamp(0.7rem, 2.4vw, 0.9rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #2FB344;
-  margin: 0 0 32px;
+  margin: 0 0 clamp(20px, 5vw, 32px);
 }
 
 .coming-soon__message {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(0.95rem, 3vw, 1.25rem);
   color: #5a5f6d;
   margin: 0;
 }

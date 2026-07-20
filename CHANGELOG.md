@@ -6,6 +6,7 @@
 - Updated the Coming Soon page to a white/light theme and swapped in the new logo (`src/assets/logomark.png`), replacing the dark theme and previous SVG logomark.
 - Restyled the Coming Soon title to "BLUESTONE" (all caps, Montserrat, `#0D3B66`) and the tagline to `#2FB344`.
 - Enlarged the Coming Soon logo for better proportion against the title text.
+- Made the Coming Soon page fully responsive: logo, title, tagline, and message now scale with fluid `clamp()` sizing and a max-width content column, tested down to ~320px-wide screens.
 
 ## [1.0.0] - initial
 
