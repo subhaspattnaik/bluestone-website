@@ -11,6 +11,7 @@
 - Sped up and increased the amplitude of the background blob animation (was too slow/subtle to read as moving at a glance) so the drift is clearly perceptible while staying soft.
 - Sped up the background blob animation another 4x (cycle duration 4-7s → 1-1.75s) per feedback that it was still too slow.
 - Changed the blob motion from bouncing back-and-forth on a fixed axis to wandering: each blob now animates to a freshly randomized position/scale every cycle (self-relaunching via `onComplete`), so movement reads as random-direction drift instead of a repeating back-and-forth.
+- Reworked the background into 10 bubble-like blobs of varying size/color/opacity that continuously rise from the bottom to above the top with a gentle horizontal drift, then loop back to the bottom at a new random spot — reading as floating bubbles instead of wandering blobs.
 
 ## [1.0.0] - initial
 
