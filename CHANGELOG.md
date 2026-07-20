@@ -8,6 +8,7 @@
 - Enlarged the Coming Soon logo for better proportion against the title text.
 - Made the Coming Soon page fully responsive: logo, title, tagline, and message now scale with fluid `clamp()` sizing and a max-width content column, tested down to ~320px-wide screens.
 - Added a soft, looping brand-colored blob animation to the Coming Soon background using anime.js (`animejs` dependency added); respects `prefers-reduced-motion`.
+- Sped up and increased the amplitude of the background blob animation (was too slow/subtle to read as moving at a glance) so the drift is clearly perceptible while staying soft.
 
 ## [1.0.0] - initial
 

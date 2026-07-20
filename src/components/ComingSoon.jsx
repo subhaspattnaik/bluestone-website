@@ -12,11 +12,11 @@ export default function ComingSoon() {
     const blobs = blobsRef.current.querySelectorAll('.coming-soon__blob')
 
     const animation = animate(blobs, {
-      translateX: () => utils.random(-60, 60),
-      translateY: () => utils.random(-40, 40),
-      scale: () => utils.random(90, 115) / 100,
-      duration: () => utils.random(9000, 14000),
-      delay: stagger(600),
+      translateX: () => utils.random(-90, 90),
+      translateY: () => utils.random(-70, 70),
+      scale: () => utils.random(85, 125) / 100,
+      duration: () => utils.random(4000, 7000),
+      delay: stagger(400),
       ease: 'inOutSine',
       loop: true,
       alternate: true,
