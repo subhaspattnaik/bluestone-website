@@ -1,4 +1,5 @@
 .coming-soon {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
@@ -8,9 +9,54 @@
   padding: 6vh 20px;
   background: #ffffff;
   color: #14161c;
+  overflow: hidden;
+}
+
+.coming-soon__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.coming-soon__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  will-change: transform;
+}
+
+.coming-soon__blob--navy {
+  top: -10%;
+  left: -8%;
+  width: clamp(240px, 40vw, 520px);
+  height: clamp(240px, 40vw, 520px);
+  background: #0D3B66;
+}
+
+.coming-soon__blob--green {
+  bottom: -12%;
+  right: -6%;
+  width: clamp(220px, 36vw, 460px);
+  height: clamp(220px, 36vw, 460px);
+  background: #2FB344;
+  opacity: 0.25;
+}
+
+.coming-soon__blob--blue {
+  top: 35%;
+  right: 15%;
+  width: clamp(160px, 26vw, 340px);
+  height: clamp(160px, 26vw, 340px);
+  background: #4c7dff;
+  opacity: 0.18;
 }
 
 .coming-soon__content {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 640px;
   display: flex;
