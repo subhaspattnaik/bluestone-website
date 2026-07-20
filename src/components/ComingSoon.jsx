@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { animate, stagger, utils } from 'animejs'
+import { animate, utils } from 'animejs'
 import logomark from '../assets/logomark.png'
 
 export default function ComingSoon() {
@@ -9,20 +9,28 @@ export default function ComingSoon() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion || !blobsRef.current) return
 
-    const blobs = blobsRef.current.querySelectorAll('.coming-soon__blob')
+    const blobs = Array.from(blobsRef.current.querySelectorAll('.coming-soon__blob'))
+    let active = true
 
-    const animation = animate(blobs, {
-      translateX: () => utils.random(-90, 90),
-      translateY: () => utils.random(-70, 70),
-      scale: () => utils.random(85, 125) / 100,
-      duration: () => utils.random(1000, 1750),
-      delay: stagger(100),
-      ease: 'inOutSine',
-      loop: true,
-      alternate: true,
-    })
+    function wander(el) {
+      if (!active) return
+      animate(el, {
+        translateX: utils.random(-110, 110),
+        translateY: utils.random(-90, 90),
+        scale: utils.random(85, 125) / 100,
+        duration: utils.random(1000, 1750),
+        ease: 'inOutSine',
+        onComplete: () => wander(el),
+      })
+    }
 
-    return () => animation.revert()
+    const timeouts = blobs.map((el, i) => setTimeout(() => wander(el), i * 100))
+
+    return () => {
+      active = false
+      timeouts.forEach(clearTimeout)
+      utils.remove(blobs)
+    }
   }, [])
 
   return (
