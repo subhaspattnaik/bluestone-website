@@ -27,6 +27,7 @@ All notable changes to the Blue Stone website are documented here.
 - Reverted the 100vh card height and made the content card a full circle instead (`border-radius: 50%`, equal width/height sized via `min(640px, 82vmin)`), content centered inside.
 - Switched `.coming-soon` from flex to CSS grid `place-items: center` (more reliable single-item centering) and added a `100dvh` fallback alongside `100vh` for correct centering on mobile browsers where the address bar affects viewport height.
 - Updated the animated background gradient to use the exact brand colors `#0D3B66`, `#1E5FAE`, `#2FB344` (was using a non-brand blue accent `#4c7dff`).
+- Removed the "Trade for Impact. Prosperity for All." tagline from the Coming Soon page as unnecessary; adjusted spacing between the title and message accordingly.
 
 ## [1.0.0] - initial
 
