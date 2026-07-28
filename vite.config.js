@@ -8,6 +8,7 @@ export default defineConfig({
     host: true,
     port: Number(process.env.PORT) || 4173,
     // Allow the Render-assigned hostname (and any *.onrender.com host)
-    allowedHosts: ['.onrender.com'],
+    // plus the production custom domain and its subdomains (www, etc.)
+    allowedHosts: ['.onrender.com', 'bluestoneagro.com', '.bluestoneagro.com'],
   },
 })

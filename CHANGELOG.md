@@ -5,6 +5,7 @@ All notable changes to the Blue Stone website are documented here.
 ## Unreleased
 
 ### Fixed
+- (2026-07-28 08:18 GMT+2) Production custom domain was blocked by the Vite `preview` host check (`Blocked request. This host ("bluestoneagro.com") is not allowed.`). Added `bluestoneagro.com` and `.bluestoneagro.com` (covers `www` and any future subdomain) to `preview.allowedHosts` in `vite.config.js`.
 - Vite `preview` server rejected the Render-assigned hostname (`Blocked request... not allowed`). Added a `preview` block to `vite.config.js` with `allowedHosts: ['.onrender.com']`, `host: true`, and `port` bound to `process.env.PORT` so the site is reachable when deployed as a Render Web Service.
 
 ### Changed
