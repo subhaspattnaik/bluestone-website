@@ -1,10 +1,9 @@
-import logomark from '../assets/logomark.svg'
+import bluestoneLogo from '../assets/bluestone-logo.png'
 
-export default function Logo({ height = 30 }) {
+export default function Logo({ height = 30, className = '' }) {
   return (
-    <a href="#top" className="logo" aria-label="Blue Stone home">
-      <img src={logomark} alt="" style={{ width: height * 0.97, height, flexShrink: 0 }} />
-      <span className="logo__wordmark">BLUESTONE</span>
+    <a href="#top" className={`logo ${className}`.trim()} aria-label="Bluestone home">
+      <img src={bluestoneLogo} alt="Bluestone" style={{ height, width: 'auto', flexShrink: 0 }} />
     </a>
   )
 }

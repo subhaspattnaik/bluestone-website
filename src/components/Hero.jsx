@@ -1,55 +1,47 @@
-const FLOW = ['Farmers', 'Aggregators', 'Accredited Suppliers', 'Organized Retail', 'Consumers']
+import { useEffect, useRef } from 'react'
+import { animate, stagger } from 'animejs'
+import heroImage from '../assets/hero-farm-warehouse.png'
 
 export default function Hero() {
+  const innerRef = useRef(null)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const el = innerRef.current
+    if (!el) return
+    const animation = animate(el.children, {
+      opacity: [0, 1],
+      translateY: [24, 0],
+      duration: 800,
+      delay: stagger(120, { start: 150 }),
+      ease: 'outQuad',
+    })
+    return () => animation.revert()
+  }, [])
+
   return (
-    <section className="hero" id="top">
-      <div className="hero__glow" aria-hidden="true" />
-      <div className="hero__inner container">
-        <span className="hero__pill">Trade for Impact · Prosperity for All</span>
-
+    <section className="hero">
+      <div className="hero__media" aria-hidden="true">
+        <img src={heroImage} alt="" />
+        <div className="hero__overlay" />
+      </div>
+      <div className="hero__inner" ref={innerRef}>
         <h1 className="hero__title">
-          Building Responsible <span className="accent">Impact Supply Chains</span> Powered by Digital Technology
+          <span className="hero__title-gradient">Moving</span> Produce.
+          <br />
+          Growing Markets.
         </h1>
-
-        <p className="hero__sub">
-          We connect smallholder farmers and local aggregators with organized retail markets
-          through liquidity, technology and trust — creating prosperity for all.
+        <p className="hero__lead">
+          Bluestone connects farmers, suppliers, and retailers through efficient procurement,
+          reliable logistics, and disciplined working capital—helping fresh produce move from
+          farms to markets with greater speed, consistency, and trust.
         </p>
-
-        <div className="hero__actions">
-          <a href="#model" className="btn hero__btn-light">
-            Explore Our Model
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h9M8.5 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
-          <a href="#cta" className="btn btn-ghost">Partner With Us</a>
-        </div>
-
-        <div className="pipeline">
-          <div className="pipeline__bar">
-            <span className="pipeline__dots">
-              <i style={{ background: '#ff5f57' }} />
-              <i style={{ background: '#febc2e' }} />
-              <i style={{ background: '#28c840' }} />
-            </span>
-            <span className="pipeline__file">impact_supply_chain.flow</span>
-          </div>
-          <div className="pipeline__body">
-            <div className="pipeline__flow">
-              {FLOW.map((node, i) => (
-                <span key={node} className="pipeline__step">
-                  <span className="pipeline__node">
-                    <span className="pipeline__dot" />
-                    {node}
-                  </span>
-                  {i < FLOW.length - 1 && <span className="pipeline__arrow">→</span>}
-                </span>
-              ))}
-            </div>
-            <p className="pipeline__caption">liquidity · transparency · reliability · sustainable prosperity</p>
-          </div>
-        </div>
+        <p className="hero__sub">
+          We believe stronger agricultural markets are built by improving how produce and capital
+          move across the supply chain. Bluestone is building that foundation—one trusted
+          relationship, one efficient transaction, and one growing ecosystem at a time.
+        </p>
+        <a href="#contact" className="btn btn-primary hero__cta">Contact Us</a>
       </div>
     </section>
   )

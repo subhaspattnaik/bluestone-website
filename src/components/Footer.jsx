@@ -1,70 +1,73 @@
 import Logo from './Logo.jsx'
-import { IconLinkedIn, IconX, IconFacebook, IconInstagram, IconYouTube } from './icons.jsx'
+import MaterialIcon from './MaterialIcon.jsx'
 
-const COLUMNS = [
-  { title: 'Our Model', links: ['The Problem', 'Our Solution', 'Impact Flywheel', 'How It Works'] },
-  { title: 'Solutions', links: ['Market Access', 'Liquidity Support', 'Supply-Chain Finance', 'Technology Platform'] },
-  { title: 'Stakeholders', links: ['Farmers', 'Aggregators', 'Retailers', 'Investors', 'Banks'] },
-  { title: 'Impact', links: ['Economic Impact', 'Social Impact', 'Environmental Impact', 'Impact Dashboard'] },
+const QUICK_LINKS = [
+  { label: 'Home', href: '#top' },
+  { label: 'Our Model', href: '#model' },
+  { label: 'Impact', href: '#impact' },
+  { label: 'Stakeholders', href: '#stakeholders' },
 ]
 
-const SOCIALS = [
-  { icon: IconLinkedIn, label: 'LinkedIn' },
-  { icon: IconX, label: 'X' },
-  { icon: IconFacebook, label: 'Facebook' },
-  { icon: IconInstagram, label: 'Instagram' },
-  { icon: IconYouTube, label: 'YouTube' },
+const CONTACT_ROWS = [
+  { icon: 'apartment', lines: ['BLUESTONE AGRO TRADE PRIVATE LIMITED'] },
+  { icon: 'id_card', lines: ['Corporate Identity Number', 'U01619HR2023PTC113058'] },
+  { icon: 'call', lines: ['+91 999 920 1638'] },
+  { icon: 'mail', lines: ['info@bluestoneagro.com'] },
 ]
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer__top">
-          <div className="footer__brand">
-            <Logo />
-            <p className="footer__eyebrow">Trade for Impact · Prosperity for All</p>
-            <p className="footer__blurb">
-              Building responsible impact supply chains through liquidity, technology and trust —
-              creating prosperity for all.
+      <div className="container footer__columns">
+        <div className="footer__brand">
+          <Logo height={38} />
+          <p className="footer__tagline">
+            <span className="footer__tagline-green">Moving</span> Produce.{' '}
+            <span className="footer__tagline-blue">Growing</span> Markets.
+          </p>
+          <div className="footer__blurb">
+            <p>
+              Bluestone connects farmers, suppliers, and retailers through efficient procurement,
+              reliable logistics, and disciplined working capital—helping fresh produce move from
+              farms to markets with greater speed, consistency, and trust.
             </p>
-            <div className="footer__socials">
-              {SOCIALS.map((s) => (
-                <a key={s.label} href="#top" className="footer__social" aria-label={s.label}>
-                  <s.icon width={17} height={17} />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {COLUMNS.map((col) => (
-            <nav key={col.title} className="footer__col" aria-label={col.title}>
-              <p className="footer__col-title">{col.title}</p>
-              {col.links.map((l) => (
-                <a key={l} href="#top" className="footer__link">{l}</a>
-              ))}
-            </nav>
-          ))}
-
-          <div className="footer__news">
-            <p className="footer__col-title">Newsletter</p>
-            <p className="footer__blurb">Stay updated with our latest impact stories and insights.</p>
-            <form className="footer__form" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="you@email.com" aria-label="Email address" />
-              <button type="submit" className="btn btn-primary">Subscribe</button>
-            </form>
+            <p>
+              We believe stronger agricultural markets are built by improving how produce and
+              capital move across the supply chain.
+            </p>
+            <p>
+              Bluestone is building that foundation—one trusted relationship, one efficient
+              transaction, and one growing ecosystem at a time.
+            </p>
           </div>
         </div>
 
-        <hr className="footer__rule" />
+        <nav className="footer__col" aria-label="Quick links">
+          <p className="footer__col-title">Quick Links</p>
+          {QUICK_LINKS.map((l) => (
+            <a key={l.href} href={l.href} className="footer__link">{l.label}</a>
+          ))}
+        </nav>
 
+        <div className="footer__col footer__contact">
+          <p className="footer__col-title">Contact</p>
+          {CONTACT_ROWS.map((row, i) => (
+            <div className="footer__contact-row" key={i}>
+              <span className="icon-chip icon-chip--sm">
+                <MaterialIcon name={row.icon} size={24} />
+              </span>
+              <span className="footer__contact-text">
+                {row.lines.map((line, j) => <span key={j}>{line}</span>)}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="container">
+        <hr className="footer__rule" />
         <div className="footer__bottom">
-          <p>© 2026 BLUE STONE · ALL RIGHTS RESERVED</p>
-          <div className="footer__legal">
-            <a href="#top">Privacy Policy</a>
-            <a href="#top">Terms of Use</a>
-            <a href="#top">Cookie Settings</a>
-          </div>
+          <p>© 2026 Bluestone. All rights reserved.</p>
         </div>
       </div>
     </footer>

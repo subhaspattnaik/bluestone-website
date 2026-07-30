@@ -1,0 +1,47 @@
+.intro {
+  padding-block: 88px;
+}
+
+.intro__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.intro__title {
+  flex: 0 0 378px;
+  max-width: 378px;
+  font-size: var(--fs-display);
+  line-height: 1.24;
+  letter-spacing: var(--ls-display);
+  background: linear-gradient(90deg, var(--green-500), var(--blue-600) 57%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.intro__title-dark {
+  color: #1a1a1a;
+}
+
+.intro__copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 685px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #1a1a1a;
+}
+
+@media (max-width: 900px) {
+  .intro__inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .intro__title {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,132 @@
+.traction .container {
+  max-width: 1500px;
+}
+
+.traction__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.traction__head h2 {
+  margin-top: 20px;
+  font-size: var(--fs-display);
+  line-height: 52px;
+  font-weight: 800;
+  letter-spacing: var(--ls-display);
+  color: #1a1a1a;
+}
+
+.traction__head-right {
+  text-align: right;
+}
+
+.traction__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.traction__metrics-col {
+  flex: 1 1 560px;
+  max-width: 633px;
+}
+
+.traction__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  background: var(--white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric-card__value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--green-500);
+}
+
+.metric-card__title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.metric-card__caption {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin-top: 4px;
+}
+
+.traction__footnote {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1a1a;
+}
+
+.traction__logos-col {
+  flex: 1 1 480px;
+  max-width: 573px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 149px;
+}
+
+.traction__logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+.traction__logo img {
+  max-height: 36px;
+  width: auto;
+  margin-top: var(--logo-offset, 0);
+}
+
+.traction__logo:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .traction__head {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .traction__head-right {
+    text-align: left;
+  }
+  .traction__body {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .traction__grid {
+    grid-template-columns: 1fr;
+  }
+  .traction__logos-col {
+    grid-auto-rows: auto;
+  }
+  .traction__logo {
+    align-items: center;
+    padding-block: 24px;
+  }
+  .traction__logo img {
+    margin-top: 0;
+  }
+}
