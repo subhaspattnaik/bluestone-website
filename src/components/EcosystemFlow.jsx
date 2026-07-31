@@ -28,7 +28,9 @@ export default function EcosystemFlow() {
               <p className="ecosystem-flow__copy">{step.copy}</p>
             </div>
             {i < STEPS.length - 1 && (
-              <MaterialIcon name="east" size={40} className="ecosystem-flow__arrow" />
+              <span className="ecosystem-flow__arrow-wrap">
+                <MaterialIcon name="east" size={40} className="ecosystem-flow__arrow" />
+              </span>
             )}
           </Fragment>
         ))}

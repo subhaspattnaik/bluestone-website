@@ -116,6 +116,11 @@
     flex-direction: column;
     gap: 40px;
   }
+  .traction__metrics-col,
+  .traction__logos-col {
+    flex-basis: auto;
+    max-width: 100%;
+  }
   .traction__grid {
     grid-template-columns: 1fr;
   }

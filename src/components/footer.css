@@ -88,6 +88,12 @@
   gap: 16px;
 }
 
+.footer__contact-heading {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
 .footer__contact-text {
   display: flex;
   flex-direction: column;

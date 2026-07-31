@@ -82,7 +82,7 @@
 
 .btn.hero__cta {
   margin-top: 8px;
-  padding: 17px 80px;
+  padding: 17px clamp(32px, 10vw, 80px);
   font-size: 18px;
 }
 

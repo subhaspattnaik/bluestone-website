@@ -12,8 +12,9 @@ const CONTACT_ROWS = [
   { icon: 'apartment', lines: ['BLUESTONE AGRO TRADE PRIVATE LIMITED'] },
   { icon: 'id_card', lines: ['Corporate Identity Number', 'U01619HR2023PTC113058'] },
   { icon: 'call', lines: ['+91 999 920 1638'] },
-  { icon: 'mail', lines: ['info@bluestoneagro.com'] },
 ]
+
+const GENERAL_INQUIRY_ROW = { icon: 'mail', lines: ['info@bluestoneagro.com'] }
 
 export default function Footer() {
   return (
@@ -61,6 +62,16 @@ export default function Footer() {
               </span>
             </div>
           ))}
+
+          <p className="footer__contact-heading">For general inquires reach out to:</p>
+          <div className="footer__contact-row">
+            <span className="icon-chip icon-chip--sm">
+              <MaterialIcon name={GENERAL_INQUIRY_ROW.icon} size={24} />
+            </span>
+            <span className="footer__contact-text">
+              {GENERAL_INQUIRY_ROW.lines.map((line, j) => <span key={j}>{line}</span>)}
+            </span>
+          </div>
         </div>
       </div>
 

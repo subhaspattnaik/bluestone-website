@@ -99,7 +99,7 @@
 .btn.cta-banner__btn {
   margin-top: 24px;
   font-size: 18px;
-  padding: 17px 80px;
+  padding: 17px clamp(32px, 10vw, 80px);
 }
 
 @media (max-width: 720px) {
