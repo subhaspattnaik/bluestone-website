@@ -6,12 +6,6 @@ import CountrySelect from './CountrySelect.jsx'
 import MaterialIcon from './MaterialIcon.jsx'
 import PartnerTypeSelect from './PartnerTypeSelect.jsx'
 
-const CONTACT_ROWS = [
-  { icon: 'apartment', lines: ['BLUESTONE AGRO TRADE PRIVATE LIMITED'] },
-  { icon: 'id_card', lines: ['Corporate Identity Number', 'U01619HR2023PTC113058'] },
-  { icon: 'call', lines: ['+91 999 920 1638'] },
-]
-
 export default function Contact() {
   const [state, handleSubmit] = useForm('mvzeykjy')
   const [phone, setPhone] = useState()
@@ -85,31 +79,6 @@ export default function Contact() {
               securing consistent high-quality volume, or a partner exploring strategic
               opportunities—we are here to provide the trade infrastructure you need.
             </p>
-          </div>
-
-          <div className="contact__rows">
-            {CONTACT_ROWS.map((row, i) => (
-              <div className="contact__row-item" key={i}>
-                <span className="icon-chip icon-chip--sm">
-                  <MaterialIcon name={row.icon} size={24} />
-                </span>
-                <span className="contact__row-text">
-                  {row.lines.map((line, j) => <span key={j}>{line}</span>)}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="contact__rows contact__rows--tight">
-            <p className="contact__row-heading">For general inquires reach out to:</p>
-            <div className="contact__row-item">
-              <span className="icon-chip icon-chip--sm">
-                <MaterialIcon name="mail" size={24} />
-              </span>
-              <span className="contact__row-text">
-                <span>info@bluestoneagro.com</span>
-              </span>
-            </div>
           </div>
         </div>
       </div>

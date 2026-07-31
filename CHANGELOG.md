@@ -4,6 +4,10 @@ All notable changes to the Blue Stone website are documented here.
 
 ## Unreleased
 
+### Changed
+- (2026-07-31) Updated Krishna Mishra's Stakeholders bio per feedback: now leads with 40+ years in agricultural finance/rural development/public policy (incl. NABARD leadership, Ashoka Fellow), the $130M+ mobilized across ventures, and his Founder (eKutir) / Advisor (FLO Agri Neo Fund) roles — replacing the previous bullets.
+- (2026-07-31) Removed the duplicated company info (name, CIN, phone, email) from the Contact section's "Let's Get In Touch" panel — that same info already lives in the Footer, so the panel now shows only the heading and intro copy.
+
 ### Fixed
 - (2026-07-30) Submitting the Contact form appeared to do nothing but make the form vanish — no visible success feedback. Root cause: the success message div carried the `.reveal` class (used sitewide for scroll-triggered fade-ins), which sets `opacity: 0` by default; that opacity is only ever animated to 1 by `initScrollAnimations()`, which registers `.reveal` elements present at page load. Since the success message only mounts later (after a successful submit), it was never registered and stayed permanently invisible. Removed the `.reveal` class from it and gave it its own independent fade+slide-in animation (`contact-success-in`, 0.4s, skipped under `prefers-reduced-motion`) so the "Thanks for reaching out!" confirmation now reliably appears.
 

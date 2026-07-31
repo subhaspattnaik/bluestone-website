@@ -17,9 +17,9 @@ const TEAM = [
     role: 'ADVISOR & INVESTOR',
     photo: krishnaPhoto,
     bullets: [
-      '30+ years of deep impact in agriculture, rural finance & digital inclusion.',
-      'Founder & Chairman of eKutir; recognized global pioneer in tech-led social enterprise.',
-      'Ashoka Fellow & Advisor to international platforms (UN, Gates Foundation, MIT) on scaling last-mile innovation.',
+      '40+ years of leadership in agricultural finance, rural development, and public policy, including senior leadership at NABARD and recognition as an Ashoka Fellow.',
+      'Helped mobilize over US$130 million across multiple ventures from sovereign funds, development finance institutions, corporates, and private investors to scale agricultural innovation and rural livelihoods.',
+      'Founder of eKutir and Advisor to the FLO Agri Neo Fund, providing strategic guidance on agricultural finance, institutional partnerships, and investment strategy.',
     ],
   },
 ]
