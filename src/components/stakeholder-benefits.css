@@ -81,7 +81,20 @@
   color: var(--text-dim);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) and (min-width: 681px) {
+  .stakeholder-benefits__grid {
+    gap: 20px;
+  }
+  .stakeholder-benefits__body {
+    padding: 24px;
+    gap: 16px;
+  }
+  .stakeholder-benefits__body h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 680px) {
   .stakeholder-benefits__grid {
     grid-template-columns: 1fr;
   }

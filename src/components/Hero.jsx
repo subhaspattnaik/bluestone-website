@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
-import heroImage from '../assets/hero-farm-warehouse.png'
+import heroImage from '../assets/hero-farm-warehouse.jpg'
 
 export default function Hero() {
   const innerRef = useRef(null)

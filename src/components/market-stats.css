@@ -8,19 +8,19 @@
   align-items: stretch;
   min-height: 798px;
   /* Aligns the copy's left edge with .container's left edge (used by the section above) at any viewport width. */
-  padding-left: max(var(--gutter), calc((100% - var(--container)) / 2 + var(--gutter)));
+  --content-inset: max(var(--gutter), calc((100% - var(--container)) / 2 + var(--gutter)));
 }
 
 .market-stats__copy {
-  max-width: 851px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 80px var(--gutter) 80px 0;
+  padding: 80px var(--gutter) 80px var(--content-inset);
 }
 
 .market-stats__title {
+  max-width: 851px;
   margin-top: 20px;
   font-size: var(--fs-display);
   line-height: 52px;
@@ -29,6 +29,7 @@
 }
 
 .market-stats__body {
+  max-width: 851px;
   margin-top: 20px;
   font-size: 20px;
   line-height: 28px;
@@ -42,6 +43,7 @@
 }
 
 .market-stats__pull {
+  max-width: 851px;
   margin-top: 63px;
   font-weight: 700;
   font-size: 20px;
@@ -85,9 +87,6 @@
   .market-stats__grid {
     grid-template-columns: 1fr;
   }
-  .market-stats__copy {
-    max-width: 100%;
-  }
   .market-stats__media {
     order: -1;
     min-height: 320px;
@@ -96,7 +95,7 @@
 
 @media (max-width: 640px) {
   .market-stats__copy {
-    padding: 56px var(--gutter) 56px 0;
+    padding: 56px var(--gutter) 56px var(--content-inset);
   }
   .market-stats__row {
     gap: 32px;

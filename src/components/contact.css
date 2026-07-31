@@ -448,4 +448,8 @@
   .contact__row {
     flex-direction: column;
   }
+  .contact__form {
+    padding: 20px;
+    border-radius: var(--radius-lg);
+  }
 }

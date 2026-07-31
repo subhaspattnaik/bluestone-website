@@ -1,4 +1,4 @@
-import produceImage from '../assets/market-stats-produce.png'
+import produceImage from '../assets/market-stats-produce.jpg'
 import CountUp from './CountUp.jsx'
 
 const STATS = [

@@ -1,5 +1,5 @@
 import subhasPhoto from '../assets/team-subhas-pattnaik.png'
-import krishnaPhoto from '../assets/team-krishna-mishra.png'
+import krishnaPhoto from '../assets/team-krishna-mishra.jpg'
 
 const TEAM = [
   {

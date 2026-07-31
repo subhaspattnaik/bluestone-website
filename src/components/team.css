@@ -72,6 +72,16 @@
   color: #1a1a1a;
 }
 
+@media (max-width: 1180px) and (min-width: 681px) {
+  .team__grid {
+    gap: 32px;
+  }
+  .team-card {
+    flex: 1 1 320px;
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 720px) {
   .team-card {
     padding: 28px;
