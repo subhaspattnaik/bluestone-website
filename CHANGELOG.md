@@ -4,6 +4,13 @@ All notable changes to the Blue Stone website are documented here.
 
 ## Unreleased
 
+### Added (2026-07-31, SEO)
+- Added Open Graph and Twitter Card meta tags (title, description, `og-image.jpg` — a new 1200x630 crop of the hero warehouse photo) so links shared on WhatsApp/LinkedIn/Slack/etc. now show a preview card instead of nothing.
+- Added a canonical `<link>` tag pointing at `https://bluestoneagro.com/`.
+- Added `public/robots.txt` (allows all crawlers, points to the sitemap) and `public/sitemap.xml` (single homepage entry — appropriate for a one-page site).
+- Added a JSON-LD `Organization` structured-data block (name, legal name, URL, logo, email, phone, country) to `index.html` for richer Google search results.
+- Rewrote the meta description to be more specific/keyword-relevant (what Bluestone actually does) instead of just restating the tagline.
+
 ### Changed (2026-07-31, second responsiveness pass)
 - Replaced the "FOR FARMERS & CHANNEL PARTNERS" card photo (`benefits-farmers.jpg`) — was an unrelated Holi-festival tractor scene, now a wholesale-market/aggregation photo (Pexels, free-for-commercial-use license) matching the card's actual subject.
 - Reduced `.contact__form`'s own internal padding on mobile (≤560px, `32px` → `20px`) — combined with the page's existing `--gutter` container padding, the form read as over-padded/narrow on phones.
