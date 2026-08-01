@@ -4,7 +4,7 @@ import CountUp from './CountUp.jsx'
 const STATS = [
   { value: '330M+', label: 'Tonnes F&V produced annually' },
   { value: '1.4B+', label: 'Growing Consumer Base' },
-  { value: '$48B+', label: 'Annually F&V Market in India, yet the sector remains under-financed' },
+  { value: '$48B+', label: 'Annual F&V Market in India, yet the sector remains under-financed' },
   { value: '$22-35B', label: 'Supply Chain Finance Opportunities' },
 ]
 

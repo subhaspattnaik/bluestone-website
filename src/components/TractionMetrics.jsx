@@ -54,7 +54,7 @@ export default function TractionMetrics() {
           </div>
           <p className="traction__footnote">
             *Data is based on operational metrics as of June 2026. For further details or to verify current
-            figures at any time, you are welcome to contact Subash Pattnaik.
+            figures at any time, you are welcome to contact Subhas Pattnaik.
           </p>
         </div>
 

@@ -11,7 +11,7 @@ const COLUMNS = [
     heading: 'Fair Prices. Faster payments. A market that finally works for you.',
     checkClass: 'stakeholder-benefits__check--green',
     points: [
-      'Direct market access - fewer intermediaries between your harvest and organised retail.',
+      'Direct market access - fewer intermediaries between your harvest and organized retail.',
       'Transparent, quality-based grading and pricing instead of arbitrary trader-set rates.',
       'Shorter payment cycles, ensuring your working capital keeps flowing.',
     ],
@@ -26,7 +26,7 @@ const COLUMNS = [
     points: [
       'Consistent, standardized quality assured via automated regional grading hubs.',
       'Predictable cold-chain supply matching quick-commerce and supermarket demand.',
-      'Complete end-to-end traceabilty from harvest origin to shelf.',
+      'Complete end-to-end traceability from harvest origin to shelf.',
     ],
   },
 ]

@@ -2,7 +2,7 @@ import MaterialIcon from './MaterialIcon.jsx'
 
 const FEATURES = [
   { icon: 'payments', label: 'Faster supplier settlements' },
-  { icon: 'verified_user', label: 'Reliable buyer fulfilment' },
+  { icon: 'verified_user', label: 'Reliable buyer fulfillment' },
   { icon: 'account_tree', label: 'Structured procurement' },
   { icon: 'psychiatry', label: 'Multi-crop sourcing' },
   { icon: 'published_with_changes', label: 'Higher capital rotation' },

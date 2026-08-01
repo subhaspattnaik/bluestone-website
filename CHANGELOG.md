@@ -4,6 +4,14 @@ All notable changes to the Blue Stone website are documented here.
 
 ## Unreleased
 
+### Fixed (2026-08-01, copy sweep for grammar/spelling/typos)
+- Footer: "For general inquires reach out to:" → "For general inquiries, reach out to:" (wrong word form + missing comma).
+- StakeholderBenefits: "traceabilty" → "traceability".
+- StakeholderBenefits: "organised" → "organized" — the site otherwise consistently uses American spelling (organized/standardized/optimized elsewhere), this was the one British-spelling outlier.
+- FeatureGrid: "fulfilment" → "fulfillment" — same American-spelling consistency fix (PathToShelf already used the double-L spelling).
+- TractionMetrics: footnote credited "Subash Pattnaik" — the founder's name is actually "Subhas Pattnaik" (as spelled correctly in the Team section) — fixed the misspelling.
+- MarketStats: "Annually F&V Market in India" → "Annual F&V Market in India" — wrong part of speech (adverb instead of the adjective needed to modify "Market").
+
 ### Added (2026-07-31, SEO)
 - Added Open Graph and Twitter Card meta tags (title, description, `og-image.jpg` — a new 1200x630 crop of the hero warehouse photo) so links shared on WhatsApp/LinkedIn/Slack/etc. now show a preview card instead of nothing.
 - Added a canonical `<link>` tag pointing at `https://bluestoneagro.com/`.

@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
           ))}
 
-          <p className="footer__contact-heading">For general inquires reach out to:</p>
+          <p className="footer__contact-heading">For general inquiries, reach out to:</p>
           <div className="footer__contact-row">
             <span className="icon-chip icon-chip--sm">
               <MaterialIcon name={GENERAL_INQUIRY_ROW.icon} size={24} />
