@@ -17,10 +17,13 @@ const METRICS = [
 // marginTop aligns each logo's own vertical center to the same ~47.5px anchor point
 // used across all five placeholder cards in the Figma file (cards are not simply
 // center-aligned — every logo shares one common center line despite differing heights).
+// height defaults to 36px (see CSS); blinkit's source PNG is a tight, near-edge-to-edge
+// crop (no breathing room baked in like the others), so at the default height its
+// wordmark reads far larger/heavier than its row-mates — rendered smaller here to match.
 const LOGOS = [
   { src: logoReliance, alt: 'Reliance Retail', marginTop: 16 },
   { src: logoFlipkart, alt: 'Flipkart', marginTop: 22 },
-  { src: logoBlinkit, alt: 'blinkit', marginTop: 32 },
+  { src: logoBlinkit, alt: 'blinkit', marginTop: 21, height: 24, shiftX: 11 },
   { src: logoSpencers, alt: "Spencer's", marginTop: 20 },
   { src: logoZepto, alt: 'zepto', marginTop: 24 },
 ]
@@ -61,7 +64,15 @@ export default function TractionMetrics() {
         <div className="traction__logos-col reveal-stagger">
           {LOGOS.map((l) => (
             <div key={l.alt} className="traction__logo">
-              <img src={l.src} alt={l.alt} style={{ '--logo-offset': `${l.marginTop}px` }} />
+              <img
+                src={l.src}
+                alt={l.alt}
+                style={{
+                  '--logo-offset': `${l.marginTop}px`,
+                  ...(l.height ? { '--logo-height': `${l.height}px` } : {}),
+                  ...(l.shiftX ? { '--logo-shift-x': `${l.shiftX}px` } : {}),
+                }}
+              />
             </div>
           ))}
         </div>

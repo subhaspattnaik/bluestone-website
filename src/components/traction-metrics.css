@@ -94,9 +94,10 @@
 }
 
 .traction__logo img {
-  max-height: 36px;
+  height: var(--logo-height, 36px);
   width: auto;
   margin-top: var(--logo-offset, 0);
+  margin-right: calc(-1 * var(--logo-shift-x, 0px));
 }
 
 .traction__logo:nth-child(5) {

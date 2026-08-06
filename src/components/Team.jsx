@@ -1,4 +1,4 @@
-import subhasPhoto from '../assets/team-subhas-pattnaik.png'
+import subhasPhoto from '../assets/team-subhas-pattnaik.jpg'
 import krishnaPhoto from '../assets/team-krishna-mishra.jpg'
 
 const TEAM = [

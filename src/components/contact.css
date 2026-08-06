@@ -244,7 +244,7 @@
   z-index: 20;
   top: calc(100% + 8px);
   left: 0;
-  width: 280px;
+  width: min(280px, calc(100vw - 64px));
   display: flex;
   flex-direction: column;
   gap: 10px;
