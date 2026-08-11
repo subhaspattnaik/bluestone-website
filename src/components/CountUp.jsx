@@ -11,24 +11,32 @@ export default function CountUp({ value, as: Tag = 'span', className }) {
     const el = ref.current
     if (!el) return
 
-    const match = value.match(/^(\D*)(\d+(?:\.\d+)?)(.*)$/)
+    const match = value.match(/^(\D*)([\d,]+(?:\.\d+)?)(.*)$/)
     if (!match || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       el.textContent = value
       return
     }
 
-    const [, prefix, numStr, suffix] = match
-    const decimals = numStr.includes('.') ? numStr.split('.')[1].length : 0
+    const [, prefix, numRaw, suffix] = match
+    const decimals = numRaw.includes('.') ? numRaw.split('.')[1].length : 0
     const target = { n: 0 }
-    el.textContent = `${prefix}0${suffix}`
+
+    const fmt = (n) => {
+      const fixed = n.toFixed(decimals)
+      if (!numRaw.includes(',')) return fixed
+      const [int, dec] = fixed.split('.')
+      return `${int.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}${dec ? `.${dec}` : ''}`
+    }
+
+    el.textContent = `${prefix}${fmt(0)}${suffix}`
 
     const animation = animate(target, {
-      n: parseFloat(numStr),
+      n: parseFloat(numRaw.replace(/,/g, '')),
       duration: 1400,
       ease: 'outExpo',
       autoplay: onScroll({ target: el, enter: 'end-=10% start' }),
       onUpdate: () => {
-        el.textContent = `${prefix}${target.n.toFixed(decimals)}${suffix}`
+        el.textContent = `${prefix}${fmt(target.n)}${suffix}`
       },
     })
 

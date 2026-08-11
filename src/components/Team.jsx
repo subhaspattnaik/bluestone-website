@@ -1,6 +1,12 @@
 import subhasPhoto from '../assets/team-subhas-pattnaik.jpg'
 import krishnaPhoto from '../assets/team-krishna-mishra.jpg'
 
+const ExternalLink = ({ href, children }) => (
+  <a className="team-card__link" href={href} target="_blank" rel="noopener noreferrer">
+    {children}
+  </a>
+)
+
 const TEAM = [
   {
     name: 'Subhas Pattnaik',
@@ -8,7 +14,10 @@ const TEAM = [
     photo: subhasPhoto,
     bullets: [
       "27+ years of deep experience in India's agricultural and food sector.",
-      'Former founder of FarmX Trading Pvt Ltd - scaled to $12M+ ARR in 4 years.',
+      <>
+        Former founder of <ExternalLink href="https://farmxindia.com/">FarmX Trading Pvt Ltd</ExternalLink> -
+        scaled to $12M+ ARR in 4 years.
+      </>,
       'Managed 55,000+ Metric Tonnes of fresh produce annually for Aditya Birla as GM.',
     ],
   },
@@ -17,9 +26,17 @@ const TEAM = [
     role: 'ADVISOR & INVESTOR',
     photo: krishnaPhoto,
     bullets: [
-      '40+ years of leadership in agricultural finance, rural development, and public policy, including senior leadership at NABARD and recognition as an Ashoka Fellow.',
+      <>
+        40+ years of leadership in agricultural finance, rural development, and public policy, including senior
+        leadership at <ExternalLink href="https://www.nabard.org/">NABARD</ExternalLink> and recognition as an{' '}
+        <ExternalLink href="https://www.ashoka.org/en-us/fellow/krishna-mishra">Ashoka Fellow</ExternalLink>.
+      </>,
       'Helped mobilize over US$130 million across multiple ventures from sovereign funds, development finance institutions, corporates, and private investors to scale agricultural innovation and rural livelihoods.',
-      'Founder of eKutir and Advisor to the FLO Agri Neo Fund, providing strategic guidance on agricultural finance, institutional partnerships, and investment strategy.',
+      <>
+        Founder of <ExternalLink href="https://www.ekutirsb.com/">eKutir</ExternalLink> and Advisor to the{' '}
+        <ExternalLink href="https://www.theflo.uk/">FLO Agri Neo Fund</ExternalLink>, providing strategic guidance
+        on agricultural finance, institutional partnerships, and investment strategy.
+      </>,
     ],
   },
 ]
@@ -42,8 +59,8 @@ export default function Team() {
               <p className="team-card__name">{member.name}</p>
               <p className="team-card__role">{member.role}</p>
               <ul className="team-card__bullets">
-                {member.bullets.map((b) => (
-                  <li key={b}>{b}</li>
+                {member.bullets.map((b, i) => (
+                  <li key={i}>{b}</li>
                 ))}
               </ul>
             </div>

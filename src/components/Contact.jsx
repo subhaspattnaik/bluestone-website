@@ -74,10 +74,14 @@ export default function Contact() {
         <div className="contact__info reveal">
           <div>
             <h2 className="contact__info-title">Let&rsquo;s Get In Touch</h2>
-            <p className="contact__info-lead">
-              Whether you are an MSME aggregator scaling procurement, an organized retailer
-              securing consistent high-quality volume, or a partner exploring strategic
-              opportunities—we are here to provide the trade infrastructure you need.
+            <p className="contact__info-lead">Whether you are:</p>
+            <ul className="contact__info-list">
+              <li>MSME aggregator scaling procurement</li>
+              <li>An organized retailer securing consistent high-quality volume</li>
+              <li>A partner exploring strategic opportunities</li>
+            </ul>
+            <p className="contact__info-lead contact__info-close">
+              Bluestone is here to provide the trade infrastructure you need.
             </p>
           </div>
         </div>

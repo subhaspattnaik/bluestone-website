@@ -6,11 +6,10 @@ import logoSpencers from '../assets/partner-logo-spencers.png'
 import logoZepto from '../assets/partner-logo-zepto.png'
 
 const METRICS = [
-  { value: '523+', title: 'Farmers onboarded', caption: 'Spanning major fertile agricultural belts' },
-  { value: '23', title: 'Channel partners', caption: 'Trusted micro-aggregators in active operation' },
-  { value: '11', title: 'FPOs & Farm Groups', caption: 'Cooperative societies pooling high-yield resources' },
-  { value: '355k', title: 'Kg Produce Traded', caption: 'Seamlessly cataloged, graded and dispatched' },
-  { value: '$3.7M+', title: 'Annual Run Rate', caption: 'Sustained volume through enterprise buyer demand' },
+  { value: '543+', title: 'Farmers onboarded', caption: 'Spanning major fertile agricultural belts' },
+  { value: '28', title: 'Channel partners', caption: 'Trusted micro-aggregators in active operation' },
+  { value: '13', title: 'FPOs & Farm Groups', caption: 'Cooperative societies pooling high-yield resources' },
+  { value: '751,485 kg', title: 'Produce Traded', caption: "As of July '26" },
   { value: '3', title: 'Indian States', caption: 'Rapid geographical expansion every single quarter' },
 ]
 
@@ -56,7 +55,7 @@ export default function TractionMetrics() {
             ))}
           </div>
           <p className="traction__footnote">
-            *Data is based on operational metrics as of June 2026. For further details or to verify current
+            *Data is based on operational metrics as of July 2026. For further details or to verify current
             figures at any time, you are welcome to contact Subhas Pattnaik.
           </p>
         </div>

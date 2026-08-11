@@ -71,6 +71,10 @@
   margin-top: 4px;
 }
 
+.metric-card:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
 .traction__footnote {
   margin-top: 20px;
   font-size: 14px;

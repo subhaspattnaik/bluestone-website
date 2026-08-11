@@ -4,6 +4,16 @@ All notable changes to the Blue Stone website are documented here.
 
 ## Unreleased
 
+### Changed (2026-08-11, Contact info panel copy per stakeholder feedback)
+- Restructured the lead copy under "Let's Get In Touch" (next to the Contact form) from one dense run-on paragraph into a scannable intro + bulleted list + closer, per boss feedback that the panel had a lot of empty space below the text. Now reads: "Whether you are:" followed by three bullets — "MSME aggregator scaling procurement", "An organized retailer securing consistent high-quality volume", "A partner exploring strategic opportunities" — then "Bluestone is here to provide the trade infrastructure you need." (closer now says "Bluestone" instead of "we"). New `.contact__info-list` (disc bullets, tight 8px gap) and `.contact__info-close` (top margin) rules in `contact.css`; the bullets fill the previously-empty vertical space between the heading and the closer.
+
+### Added (2026-08-11, Stakeholders section external links)
+- Turned the organization names in the "Built By Experts" team bios into bolded hyperlinks that open the linked site in a new tab: FarmX Trading Pvt Ltd (Subhas Pattnaik bio → `https://farmxindia.com/`); NABARD and Ashoka Fellow (Krishna Mishra bio → `https://www.nabard.org/`, `https://www.ashoka.org/en-us/fellow/krishna-mishra`); eKutir and FLO Agri Neo Fund (→ `https://www.ekutirsb.com/`, `https://www.theflo.uk/`). `Team.jsx` now renders each bullet as JSX with a small `ExternalLink` helper (`target="_blank" rel="noopener noreferrer"`); bullets keyed by index instead of string since they're no longer plain text. New `.team-card__link` rule in `team.css` (bold, brand blue, underline on hover) — the site previously had no in-body external links.
+
+### Changed (2026-08-11, Impact section data refresh to July 2026)
+- Updated the "Traction Backed By Real Operational Data" metric cards with the latest operational figures as of July 2026: Farmers onboarded 523+ → 543+, Channel partners 23 → 28, FPOs & Farm Groups 11 → 13, Kg Produce Traded 355k → 751,485 kg (caption now "As of July '26"). Removed the $3.7M+ Annual Run Rate card (no longer part of the reported figures), leaving 5 cards; made the 5th card ("Indian States") span the full grid row in `traction-metrics.css` so the 2-column grid reads balanced with an odd count (mirrors the existing 5th-logo full-width rule in the same section). Updated the section footnote's as-of date from June 2026 to July 2026.
+- `CountUp.jsx`: the new Produce Traded value is comma-formatted ("751,485 kg"), which the count-up animation did not support — the old regex stopped at the first comma, so it would have counted 0→751 while rendering a static ",485 kg" (starting from "0,485 kg"). The parser now accepts thousands separators in the numeric run, counts the full 751,485 value, and re-inserts the grouping commas as it counts (e.g. "0 kg" → "751,485 kg"). Unchanged behavior for all existing comma-free values (523+, 330M+, $48B+, etc.).
+
 ## [2.0.0] - 2026-08-06
 
 Full site rebuild merged from `redesign-2026` into `main` and deployed to production, replacing the "Coming Soon" placeholder that had been live since the 1.0.0 initial build. Everything below through the "Coming Soon" placeholder entry was accumulated on that branch.
