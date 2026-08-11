@@ -4,6 +4,9 @@ All notable changes to the Blue Stone website are documented here.
 
 ## Unreleased
 
+### Fixed (2026-08-11, navbar not sticking on scroll)
+- The navbar had `position: sticky; top: 0` but didn't stick while scrolling. Root cause: both `html` and `body` carried `overflow-x: hidden` (added 2026-08-05 as a backstop against the site-wide horizontal-overflow bug). An ancestor with `overflow-x: hidden` computes `overflow-y` to `auto`, turning it into a scroll container — `position: sticky` then sticks relative to that container's scrollport (the whole body) instead of the viewport, so the nav never visually pins. Replaced `overflow-x: hidden` with `overflow-x: clip` on `html` and `body` in `src/index.css`: `clip` still clips horizontal overflow (keeping the no-horizontal-scroll guarantee) but explicitly does NOT create a scroll container, so sticky works again. No other ancestors of the nav set overflow.
+
 ### Changed (2026-08-11, Contact info panel copy per stakeholder feedback)
 - Restructured the lead copy under "Let's Get In Touch" (next to the Contact form) from one dense run-on paragraph into a scannable intro + bulleted list + closer, per boss feedback that the panel had a lot of empty space below the text. Now reads: "Whether you are:" followed by three bullets — "MSME aggregator scaling procurement", "An organized retailer securing consistent high-quality volume", "A partner exploring strategic opportunities" — then "Bluestone is here to provide the trade infrastructure you need." (closer now says "Bluestone" instead of "we"). New `.contact__info-list` (disc bullets, tight 8px gap) and `.contact__info-close` (top margin) rules in `contact.css`; the bullets fill the previously-empty vertical space between the heading and the closer.
 
