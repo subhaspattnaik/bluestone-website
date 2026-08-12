@@ -14,10 +14,7 @@ const TEAM = [
     photo: subhasPhoto,
     bullets: [
       "27+ years of deep experience in India's agricultural and food sector.",
-      <>
-        Former founder of <ExternalLink href="https://farmxindia.com/">FarmX Trading Pvt Ltd</ExternalLink> -
-        scaled to $12M+ ARR in 4 years.
-      </>,
+      'Former founder of FarmX Trading Pvt Ltd - scaled to $12M+ ARR in 4 years.',
       'Managed 55,000+ Metric Tonnes of fresh produce annually for Aditya Birla as GM.',
     ],
   },

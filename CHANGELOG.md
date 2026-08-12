@@ -4,6 +4,9 @@ All notable changes to the Blue Stone website are documented here.
 
 ## Unreleased
 
+### Fixed (2026-08-12, FarmX link removed)
+- Removed the FarmX Trading Pvt Ltd hyperlink from Subhas Pattnaik's bio in the "Built By Experts" section — the link (previously pointing to `https://farmxindia.com/`) was incorrect and will be restored once the correct URL is confirmed. The organization name now renders as plain text; the `ExternalLink` helper and links for NABARD, Ashoka Fellow, eKutir, and FLO Agri Neo Fund are unchanged.
+
 ### Fixed (2026-08-11, navbar not sticking on scroll)
 - The navbar had `position: sticky; top: 0` but didn't stick while scrolling. Root cause: both `html` and `body` carried `overflow-x: hidden` (added 2026-08-05 as a backstop against the site-wide horizontal-overflow bug). An ancestor with `overflow-x: hidden` computes `overflow-y` to `auto`, turning it into a scroll container — `position: sticky` then sticks relative to that container's scrollport (the whole body) instead of the viewport, so the nav never visually pins. Replaced `overflow-x: hidden` with `overflow-x: clip` on `html` and `body` in `src/index.css`: `clip` still clips horizontal overflow (keeping the no-horizontal-scroll guarantee) but explicitly does NOT create a scroll container, so sticky works again. No other ancestors of the nav set overflow.
 
